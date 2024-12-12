@@ -13,13 +13,15 @@ let package = Package(
         .library(name: "Flagd", targets: ["Flagd"])
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-open-feature/swift-open-feature.git", branch: "main")
+        .package(url: "https://github.com/swift-open-feature/swift-open-feature.git", branch: "main"),
+        .package(url: "https://github.com/grpc/grpc-swift.git", from: "1.8.0"),
     ],
     targets: [
         .target(
             name: "Flagd",
             dependencies: [
-                .product(name: "OpenFeature", package: "swift-open-feature")
+                .product(name: "OpenFeature", package: "swift-open-feature"),
+                .product(name: "GRPC", package: "grpc-swift"),
             ]
         ),
         .testTarget(

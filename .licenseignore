@@ -7,3 +7,7 @@
 *.txt
 *.yaml
 Package.swift
+Makefile
+.gitmodules
+flagd-schemas/
+*/Generated/**
